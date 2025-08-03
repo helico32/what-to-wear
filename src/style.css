@@ -1,0 +1,183 @@
+/* _________________ BASE STYLES _________________ */
+:root {
+  --dark-blue: hsl(208, 87%, 32%);
+  --light-blue: hsl(208, 100%, 97%);
+  --soft-beige: hsl(34, 78%, 91%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  background-color: hsl(195, 53%, 79%);
+  font-family: "Google Sans Code", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+}
+
+/* _________________ TITLE/BANNER_________________ */
+h1 {
+  display: flex;
+  justify-content: center;
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: var(--dark-blue);
+  font-size: 4rem;
+  width: fit-content;
+  margin: 0.5rem auto 0;
+  padding: 1rem 4rem;
+  background-color: hsl(34, 78%, 91%, 0.8);
+  border-radius: 1rem 0;
+}
+
+/* _________________ INPUT SECTION _________________ */
+#inputSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 16rem;
+  margin: 1rem auto;
+  padding: 1rem;
+  gap: 0.5rem;
+  color: var(--dark-blue);
+  row-gap: 1rem;
+}
+
+#inputSection input {
+  color: var(--dark-blue);
+  padding: 0.5rem;
+  outline: none;
+  border-style: solid;
+  border-width: 0.1rem;
+  border-radius: 1rem;
+  border-color: var(--dark-blue);
+}
+
+#inputSection input:focus {
+  border-width: 0.1rem;
+  border-color: hsl(33, 100%, 88%);
+}
+
+#fahrenheitCheckbox {
+  display: flex;
+  justify-content: end;
+}
+
+#fahrenheitCheckbox input[type="checkbox"] {
+  margin-right: 0.3rem;
+}
+
+#buttonCity {
+  display: flex;
+  align-self: center;
+  color: var(--light-blue);
+  background-color: hsla(208, 87%, 32%, 0.4);
+  border: 0.2rem solid hsla(208, 87%, 32%, 0.4);
+  border-radius: 2rem;
+  width: fit-content;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+}
+
+#buttonCity:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease;
+}
+
+/* _________________ WEATHER RESULT SECTION _________________ */
+#resultSection {
+  margin: 0 1.5rem 0 1.5rem;
+  background-color: var(--light-blue);
+  border: 2px solid white;
+  border-radius: 2rem;
+  justify-self: center;
+  padding: 1.5rem;
+}
+
+#resultSection p,
+#resultSection h2,
+#resultSection h3,
+#resultSection h4,
+#resultSection div {
+  background-color: var(--light-blue);
+}
+
+/* Weather icon styling within results */
+#resultSection img {
+  border: 2px solid white;
+  background-color: hsl(208, 41%, 77%);
+}
+
+.separator {
+  border-top: 1px solid grey;
+  margin: 15px 0;
+  width: 100%;
+}
+
+.weather-row {
+  display: flex;
+  margin: 1rem 0;
+}
+
+.weather-col {
+  flex: 0.5;
+  padding: 0 10px;
+}
+
+/* _________________ CLOTHES ICONS SECTION _________________ */
+#iconSection {
+  margin: 1rem 1.5rem 2rem 1.5rem;
+  padding: 2rem 1rem;
+  gap: 1rem;
+  background-color: var(--soft-beige);
+  border-radius: 2rem;
+  border: 2px solid hsl(33, 100%, 88%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-self: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+#iconSection h3 {
+  margin-bottom: 1rem;
+  text-align: center;
+  width: 100%; /* Forces to take all the line */
+  background-color: var(--soft-beige);
+}
+
+.icon-item {
+  background-color: var(--soft-beige); /* Visual consistency */
+}
+
+.clothing-icon {
+  max-width: 65px;
+  max-height: 65px;
+  justify-content: space-evenly;
+  background-color: var(--soft-beige);
+}
+
+.icon-label {
+  display: flex;
+  max-width: 65px;
+  justify-content: space-evenly;
+  background-color: var(--soft-beige);
+}
+
+/* _________________ FOOTER _________________ */
+
+footer,
+footer a {
+  font-size: 0.7rem;
+  color: var(--dark-blue);
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+footer a:hover {
+  text-decoration: underline solid var(--soft-beige) 1px;
+}

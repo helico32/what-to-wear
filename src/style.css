@@ -94,6 +94,7 @@ h1 {
   border-radius: 2rem;
   justify-self: center;
   padding: 1.5rem;
+  display: none;
 }
 
 #resultSection p,
@@ -139,6 +140,7 @@ h1 {
   justify-self: center;
   justify-content: center;
   gap: 2rem;
+  display: none;
 }
 
 #iconSection h3 {

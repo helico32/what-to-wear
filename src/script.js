@@ -11,14 +11,6 @@ import { sendCity } from "./js/geolocation.js";
 // Import API rate limiting functionality from separate module
 import { apiCallsHistory, showLimitReached } from "./js/api-limits.js";
 
-// _____________________________INITIALIZATION _____________________________
-/**
- * Hide result sections on page load to prevent empty containers from showing
- * before user makes their first search
- */
-document.getElementById("resultSection").style.display = "none";
-document.getElementById("iconSection").style.display = "none";
-
 // _____________________________EVENT LISTENER _____________________________
 /**
  * Submit search by the send button or enter key

@@ -5,7 +5,7 @@ This is my take on the "weather-app-to-show-I-can-use-API's" with a practical tw
 ### Overview
 The app displays current weather, daily temperature evolution, and suggests what to wear depending on the felt temperature. The default setting is in Celsius but there is an option to choose Fahrenheit. Because sometimes "18°C" doesn't tell you if you need a jacket. 
 
-Live Demo: [What to wear]()
+Live Demo: [What to wear](https://what-to-wear-sigma.vercel.app)
 
 
 ### Why?

@@ -28,6 +28,7 @@ import { renderResponse } from "./display-meteo.js"; // Weather display renderin
 export function getWeather(latitude, longitude, cityName) {
   const urlForWeather = "https://api.openweathermap.org/data/3.0/onecall?"; // API endpoint first part
   const endpoint = `${urlForWeather}lat=${latitude}&lon=${longitude}&appid=${apiKey}`; // Build API endpoint URL
+  const errorMessage = document.getElementById("errorMessage");
 
   // Fetch request to the API & response handling
   fetch(endpoint, { cache: "no-cache" })
@@ -46,6 +47,9 @@ export function getWeather(latitude, longitude, cityName) {
         !jsonResponse.daily ||
         !jsonResponse.daily[0]
       ) {
+        errorMessage.textContent = "⚠️ Incomplete data, please try again.";
+        errorMessage.style.display = "block";
+        errorMessage.style.opacity = "1";
         return; // Exit early if data is malformed. May add in the future a user friendly error message asking to retry
       }
 
@@ -81,7 +85,7 @@ export function getWeather(latitude, longitude, cityName) {
         tempDay, // Day temperature
         tempEvening, // Evening temperature
         tempNight, // Night temperature
-        cityName, // City name for display (UX)
+        cityName, // Added for UX reason. Name provided by first API because second API gives the station name which differs from what the user enters.
         weather, // Weather condition (Rain/Clear/etc.)
         description, // Detailed weather description
         weatherNum // Weather icon code
@@ -90,5 +94,9 @@ export function getWeather(latitude, longitude, cityName) {
     // Error handling during data fetching
     .catch((error) => {
       console.error("Erreur fetch:", error);
+      errorMessage.textContent =
+        "⚠️ Unable to access the data. Check your connection";
+      errorMessage.style.display = "block";
+      errorMessage.style.opacity = "1";
     });
 }

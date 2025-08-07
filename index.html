@@ -20,7 +20,11 @@
       content="Get clothing recommendations based on current weather conditions. Enter any city to see what to wear today."
     />
     <title>What to wear - Weather Clothing Recommendations</title>
-    <link rel="icon" type="image/svg+xml" href="./src/images/weather/evening.png" >
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="./src/images/weather/evening.png"
+    />
     <link rel="stylesheet" href="./src/style.css" />
     <script type="module" src="./src/script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -33,6 +37,8 @@
 
   <body>
     <h1>What to wear</h1>
+
+    <div id="errorMessage" aria-label="Display error message"></div>
 
     <!-- User input section -->
     <div id="inputSection">
@@ -64,5 +70,8 @@
     <!-- Clothing recommendations display container -->
     <div id="iconSection" aria-label="Clothing recommendations"></div>
   </body>
-  <footer> Created during a rainy summer by <a href="https://github.com/helico32">Angéla Binot</a> </footer>
+  <footer>
+    Created during a rainy summer by
+    <a href="https://github.com/helico32">Angéla Binot</a>
+  </footer>
 </html>

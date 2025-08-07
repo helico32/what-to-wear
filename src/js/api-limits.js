@@ -15,12 +15,16 @@ export let apiCallsHistory = [];
 
 //___________________LIMIT REACHED DISPLAY____________________
 export function showLimitReached() {
-  const results = document.getElementById("resultSection");
-  document.getElementById("iconSection").style.display = "none"; // Hides the clothes icon section
-  results.style.display = "flex";
-  results.innerHTML = `
-    <div>
-      <h2>⚠️ Limit reached </h2>
-      <p>You reached the daily limit. Please try again later.</p>
-    </div>`;
+  // Hide other sections
+  document.getElementById("resultSection").style.display = "none";
+  document.getElementById("iconSection").style.display = "none";
+
+  // Error message of daily limit & clear input field
+  const errorMessage = document.getElementById("errorMessage");
+  errorMessage.textContent =
+    "⚠️ You reached the daily limit. Please try again later.";
+  errorMessage.style.display = "block";
+  errorMessage.style.opacity = "1";
+  const cityNameInput = document.getElementById("cityName");
+  cityNameInput.value = ""; // Clear the field
 }

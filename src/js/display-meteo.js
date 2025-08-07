@@ -58,9 +58,6 @@ export const renderResponse = (
   // Weather icon from API + @2x for high-resolution version
   const weatherIcon = `https://openweathermap.org/img/wn/${weatherNum}@2x.png`;
 
-  // Added for UX reason. Name provided by first API because second API gives the station name which differs from what the user enters.
-  const city = cityName;
-
   // Added for UX reason. When the temperature is identical to the felt one it changes the message
   let feelingText;
   if (
@@ -82,7 +79,7 @@ export const renderResponse = (
   if (checkboxFahrenheit.checked === true) {
     results.style.display = "block"; // Make results section visible
     results.innerHTML = `
-    <h2> ${city}</h2>
+    <h2> ${cityName}</h2>
     <h3> Now </h3>
     <p>Temp: ${tempFahrenheit} °F ${feelingText}</p>  
  
@@ -120,7 +117,7 @@ export const renderResponse = (
     // Celsius display (same logic than Farenheit)
     results.style.display = "block"; // Make results section visible
     results.innerHTML = `
-     <h2> ${city}</h2>
+     <h2> ${cityName}</h2>
     <h3> Now </h3>
     <p>Temp: ${tempNormal}°C ${feelingText}</p>
 

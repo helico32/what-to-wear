@@ -35,8 +35,9 @@ Main idea: Make it simple and unisex for people who want to make fewer decisions
 
 
 ### Future features? 
-- User side of the error messages.
+- User side of the error messages. [Added 7/08]
 - History of the last searched locations.
+- Add country (in result and search, still thinking how UX wise).
 - More explanations (the felt temperature is used for the day temperatures).
 - Help section with photos of outfits for ideas (can be extended to user-imported ones if there is backend and authentication).
 - Personalization by the user of what to wear at what temperature (a different storage method is needed).
@@ -53,4 +54,4 @@ During my next project, I'll try to use TypeScript, Sass and a better debugging 
 It was a fun project! I use it every day and I hope it will be useful to others too!
 
 
-*Copyright: Weather Data from [OpenWeather API](https://openweathermap.org/api "Documentation officielle"). Attribution of the images used are in the HTML file.*
+*Copyright: Weather Data from [OpenWeather API](https://openweathermap.org/api "Documentation"). Attribution of the images used are in the HTML file.*
